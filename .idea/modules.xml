@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DbExport/DbExport.iml" filepath="$PROJECT_DIR$/DbExport/DbExport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DbImport/DbImport.iml" filepath="$PROJECT_DIR$/DbImport/DbImport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DbTransfer/DbTransfer.iml" filepath="$PROJECT_DIR$/DbTransfer/DbTransfer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyDb.iml" filepath="$PROJECT_DIR$/EasyDb.iml" />
+    </modules>
+  </component>
+</project>

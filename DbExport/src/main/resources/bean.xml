@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!-- 引入配置文件 -->
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:jdbc.properties" />
+    </bean>
+    <!-- 配置dbcp数据源 -->
+    <bean id="mysqlDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method='init'      destroy-method="close">
+        <property name="driverClassName" value="${mysql.jdbc.driverClassName}" />
+        <property name="url" value="${mysql.jdbc.url}" />
+        <property name="username" value="${mysql.jdbc.username}" />
+        <property name="password" value="${mysql.jdbc.password}" />
+        <property name="minIdle" value="${mysql.jdbc.minIdle}" />        <!-- 队列中的最小等待数 -->
+        <property name="maxWait" value="${mysql.jdbc.maxWait}" />        <!-- 最长等待时间，单位毫秒 -->
+        <property name="maxActive" value="${mysql.jdbc.maxActive}" />    <!-- 最大活跃数 -->
+        <property name="initialSize" value="${mysql.jdbc.initialSize}" /><!-- 初始大小 -->
+        <property name="filters" value="${mysql.jdbc.filters}"/>
+    </bean>
+    <!-- 配置dbcp数据源 -->
+    <bean id="mysqlDataSource1" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method='init'      destroy-method="close">
+        <property name="driverClassName" value="${mysql.jdbc.driverClassName}" />
+        <property name="url" value="${mysql.jdbc.url1}" />
+        <property name="username" value="${mysql.jdbc.username}" />
+        <property name="password" value="${mysql.jdbc.password}" />
+        <property name="minIdle" value="${mysql.jdbc.minIdle}" />        <!-- 队列中的最小等待数 -->
+        <property name="maxWait" value="${mysql.jdbc.maxWait}" />        <!-- 最长等待时间，单位毫秒 -->
+        <property name="maxActive" value="${mysql.jdbc.maxActive}" />    <!-- 最大活跃数 -->
+        <property name="initialSize" value="${mysql.jdbc.initialSize}" /><!-- 初始大小 -->
+        <property name="filters" value="${mysql.jdbc.filters}"/>
+    </bean>
+</beans>

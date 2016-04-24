@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DbToFile>
+    <Task>
+        <DbSourceId>mysqlDataSource</DbSourceId>
+        <SubTask>
+            <SQLList>
+                <SQL action="select" table="user_t">
+                    <column>id,user_name,password,age</column>
+                </SQL>
+            </SQLList>
+            <Config releaseDataFilePath="This is a ReleaseDataFilePath"
+                    releaseLogFilePath="This is a ReleaseLogFilePath"
+                    releaseBackupPath="This is a ReleaseBackupPath"
+                    releaseChkFilePath="This is a ReleaseChkFilePath"/>
+        </SubTask>
+    </Task>
+    <Task>
+        <DbSourceId>mysqlDataSource</DbSourceId>
+        <SubTask>
+            <SQLList>
+                <SQL action="select" table="user">
+                    <column>Host,User,Select_priv,Insert_priv,Update_priv,Delete_priv,Create_priv,Drop_priv,Reload_priv,Shutdown_priv,Process_priv,File_priv,Grant_priv,References_priv,Index_priv,Alter_priv,Show_db_priv,Super_priv,Create_tmp_table_priv,Lock_tables_priv,Execute_priv,Repl_slave_priv,Repl_client_priv,Create_view_priv,Show_view_priv,Create_routine_priv,Alter_routine_priv,Create_user_priv,Event_priv,Trigger_priv,Create_tablespace_priv,ssl_type,ssl_cipher,x509_issuer,x509_subject,max_questions,max_updates,max_connections,max_user_connections,plugin,authentication_string,password_expired,password_last_changed,password_lifetime,account_locked</column>
+                </SQL>
+            </SQLList>
+            <Config releaseDataFilePath="This is a ReleaseDataFilePath1"
+                    releaseLogFilePath="This is a ReleaseLogFilePath1"
+                    releaseBackupPath="This is a ReleaseBackupPath1"
+                    releaseChkFilePath="This is a ReleaseChkFilePath1"/>
+        </SubTask>
+    </Task>
+    <Task>
+        <DbSourceId>mysqlDataSource1</DbSourceId>
+        <SubTask>
+            <SQLList>
+                <SQL action="select" table="students">
+                    <column>id,name,sex,age,tel</column>
+                </SQL>
+            </SQLList>
+            <Config releaseDataFilePath="This is a ReleaseDataFilePath2"
+                    releaseLogFilePath="This is a ReleaseLogFilePath2"
+                    releaseBackupPath="This is a ReleaseBackupPath2"
+                    releaseChkFilePath="This is a ReleaseChkFilePath2"/>
+        </SubTask>
+    </Task>
+</DbToFile>
